@@ -4,6 +4,7 @@ using namespace std;
 int maxPathSum(int *arr1, int *arr2, int m, int n)
 {
     int i = 0, j = 0;
+    int mod=1e9+7;
     int sum1 = 0, sum2 = 0;
     int result = 0;
 
@@ -32,6 +33,7 @@ int maxPathSum(int *arr1, int *arr2, int m, int n)
         sum2 += arr2[j++];
 
     result += max(sum1, sum2);
+    result=result%mod;
     return result;
 }
 
